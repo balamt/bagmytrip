@@ -1,0 +1,107 @@
+graph TB
+    subgraph "Frontend Layer"
+        A[Mobile App - Flutter] 
+        B[Web App - React]
+        C[Voice Interface]
+    end
+    
+    subgraph "API Gateway Layer"
+        D[Cloud Endpoints]
+        E[Load Balancer]
+    end
+    
+    subgraph "Microservices Layer - Cloud Run"
+        F[Trip Planning Service]
+        G[Booking Service]
+        H[Visa AI Agent]
+        I[Insurance Service]
+        J[Souvenir Service]
+        K[Prediction Service]
+        L[Packing Assistant]
+        M[User Management]
+    end
+    
+    subgraph "Google AI Services"
+        N[Vertex AI - ML Models]
+        O[Gemini Pro - Conversations]
+        P[Document AI - OCR]
+        Q[Cloud Vision - Image Recognition]
+        R[AutoML - Personalization]
+    end
+    
+    subgraph "Google Cloud Services"
+        S[Google Maps Platform]
+        T[Cloud Translation]
+        U[Firebase Auth]
+        V[Cloud Storage]
+    end
+    
+    subgraph "Data Layer"
+        W[BigQuery - Analytics]
+        X[Firestore - Real-time DB]
+        Y[Cloud SQL - Transactions]
+    end
+    
+    subgraph "External APIs"
+        Z[Insurance Providers]
+        AA[Booking Platforms]
+        AB[Embassy APIs]
+        AC[Cultural Databases]
+        AD[Weather APIs]
+    end
+    
+    subgraph "Integration Layer"
+        AE[Rakuten Ecosystem]
+        AF[Payment Gateways]
+        AG[Shipping Partners]
+    end
+    
+    A --> D
+    B --> D
+    C --> D
+    D --> E
+    E --> F
+    E --> G
+    E --> H
+    E --> I
+    E --> J
+    E --> K
+    E --> L
+    E --> M
+    
+    F --> N
+    F --> O
+    G --> S
+    H --> P
+    I --> N
+    J --> Q
+    K --> R
+    L --> N
+    
+    F --> T
+    G --> U
+    H --> U
+    M --> U
+    
+    F --> W
+    G --> X
+    H --> X
+    I --> Y
+    J --> X
+    K --> W
+    L --> X
+    M --> X
+    
+    G --> AA
+    H --> AB
+    I --> Z
+    J --> AC
+    K --> AD
+    
+    G --> AE
+    G --> AF
+    J --> AG
+    
+    V --> F
+    V --> J
+    V --> L

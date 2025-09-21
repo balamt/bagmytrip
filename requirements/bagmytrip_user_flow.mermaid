@@ -1,0 +1,77 @@
+flowchart TD
+    A[User Opens App] --> B{New User?}
+    B -->|Yes| C[Profile Setup & Preferences]
+    B -->|No| D[Welcome Back Dashboard]
+    
+    C --> E[AI Onboarding Chat]
+    D --> F[Trip Planning Options]
+    E --> F
+    
+    F --> G{Planning Method}
+    G -->|Voice| H[Voice Input via Gemini]
+    G -->|Chat| I[Text Chat Interface]
+    G -->|Quick| J[Template Selection]
+    
+    H --> K[AI Processes Request]
+    I --> K
+    J --> K
+    
+    K --> L[Gemini Analysis]
+    L --> M[Generate Base Itinerary]
+    
+    M --> N[Weather Forecast Check]
+    N --> O[Event & Festival Analysis]
+    O --> P[Budget Optimization]
+    
+    P --> Q{Visa Required?}
+    Q -->|Yes| R[Visa AI Agent Activation]
+    Q -->|No| S[Insurance Assessment]
+    
+    R --> R1[Document Requirements]
+    R1 --> R2[Auto Form Filling]
+    R2 --> R3[Embassy Appointment]
+    R3 --> S
+    
+    S --> S1[Risk Assessment]
+    S1 --> S2[Insurance Recommendations]
+    S2 --> T[Packing Recommendations]
+    
+    T --> T1[Weather-based Items]
+    T1 --> T2[Activity-specific Gear]
+    T2 --> U[Cultural Insights & Souvenirs]
+    
+    U --> U1[Authentic Souvenir Suggestions]
+    U1 --> U2[Cultural Context & Stories]
+    U2 --> V[Final Itinerary Review]
+    
+    V --> W{User Satisfied?}
+    W -->|No| X[Modify Preferences]
+    W -->|Yes| Y[Booking Options]
+    
+    X --> K
+    
+    Y --> Y1[Accommodation Booking]
+    Y1 --> Y2[Transport Booking]
+    Y2 --> Y3[Activity Booking]
+    Y3 --> Y4[Insurance Purchase]
+    Y4 --> Z[One-Click Payment]
+    
+    Z --> AA[Confirmation & Documents]
+    AA --> BB[Pre-Trip Reminders]
+    BB --> CC[Real-time Trip Support]
+    
+    CC --> DD{During Trip}
+    DD --> DD1[Weather Updates]
+    DD --> DD2[Local Recommendations]
+    DD --> DD3[Emergency Support]
+    DD --> DD4[Souvenir Reminders]
+    
+    DD1 --> EE[Post-Trip Experience]
+    DD2 --> EE
+    DD3 --> EE
+    DD4 --> EE
+    
+    EE --> FF[Trip Review & Rating]
+    FF --> GG[Memory Collection]
+    GG --> HH[AI Learning Update]
+    HH --> II[Future Trip Suggestions]

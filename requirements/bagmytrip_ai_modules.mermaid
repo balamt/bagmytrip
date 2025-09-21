@@ -1,0 +1,93 @@
+graph LR
+    subgraph "User Interaction Layer"
+        A[User Input]
+        B[Voice/Text/Image]
+    end
+    
+    subgraph "Core AI Engine"
+        C[Gemini Pro]
+        D[Vertex AI]
+        E[AutoML]
+    end
+    
+    subgraph "AI Service Modules"
+        F[🤖 Trip Planner AI]
+        G[⚙️ Customization AI]
+        H[💰 Budget Optimizer AI]
+        I[📊 Prediction AI]
+        J[🛂 Visa AI Agent]
+        K[🎒 Packing AI]
+        L[🛡️ Insurance AI]
+        M[🎁 Souvenir AI]
+    end
+    
+    subgraph "Data Processing"
+        N[Document AI]
+        O[Cloud Vision]
+        P[Translation API]
+        Q[Maps API]
+    end
+    
+    subgraph "Knowledge Base"
+        R[Travel Patterns]
+        S[Cultural Database]
+        T[Insurance Risk Models]
+        U[Weather Patterns]
+        V[User Preferences]
+    end
+    
+    subgraph "Output Generation"
+        W[Personalized Itinerary]
+        X[Booking Recommendations]
+        Y[Risk Assessments]
+        Z[Cultural Insights]
+    end
+    
+    A --> B
+    B --> C
+    C --> D
+    D --> E
+    
+    C --> F
+    C --> G
+    C --> J
+    
+    D --> H
+    D --> I
+    D --> K
+    D --> L
+    D --> M
+    
+    F --> N
+    F --> Q
+    G --> P
+    H --> Q
+    I --> R
+    J --> N
+    K --> O
+    L --> T
+    M --> S
+    
+    F --> R
+    F --> V
+    G --> V
+    H --> R
+    I --> U
+    J --> S
+    K --> V
+    L --> T
+    M --> S
+    
+    F --> W
+    G --> W
+    H --> X
+    I --> W
+    J --> Z
+    K --> W
+    L --> Y
+    M --> Z
+    
+    W --> A
+    X --> A
+    Y --> A
+    Z --> A
