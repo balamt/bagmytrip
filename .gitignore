@@ -2,3 +2,5 @@ node_modules
 .claude
 backend/.env
 frontend/node_modules
+.env
+**/.env
